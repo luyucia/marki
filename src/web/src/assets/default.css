@@ -1,0 +1,16 @@
+.markdown_show h1,h2,h3,h4,h5,h6{
+    color: #42b983;
+}
+
+.markdown_show a:link,a:hover,a:visited{
+    text-decoration: none;
+    color: #3eb581;
+}
+.markdown_show code{
+    background: #f9f9f9;
+    padding: 5px 15px;
+}
+.markdown_show{
+    line-height: 30px;
+   font-family: 'PingFang SC', 'Myriad Pro', 'Hiragino Sans GB','youyuan', sans-serif;
+}
