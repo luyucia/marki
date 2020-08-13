@@ -7,9 +7,14 @@ import (
 )
 
 type Response struct {
-	Code int `json:"code"`
-	Msg string `json:"msg"`
+	Code int         `json:"code"`
+	Msg  string      `json:"msg"`
 	Data interface{} `json:"data"`
+}
+
+type Content struct {
+	ContentText string `json:"content"`
+	Type        string `json:"content_type"`
 }
 
 func SuccessResponse(data interface{}) Response {
@@ -21,13 +26,18 @@ func SuccessResponse(data interface{}) Response {
 }
 
 func GetMenu(c echo.Context) error {
-	return c.JSON(http.StatusOK, SuccessResponse(app.MenuData))
+	return c.JSON(http.StatusOK, SuccessResponse(app.GMenuData))
 }
 
 func GetContent(c echo.Context) error {
 
 	id := c.QueryParam("id")
-	html := app.GenerateContent(id)
-	return c.HTML(http.StatusOK,string(html))
+	html, ext := app.GenerateContent(id)
+
+	content := Content{}
+	content.Type = ext
+	content.ContentText = string(html)
+
+	return c.JSON(http.StatusOK, content)
 
 }

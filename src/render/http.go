@@ -1,7 +1,7 @@
 package render
 
 // 转换.http格式为文档
-func HttpRender(s []byte) string {
+func HttpRender(s []byte) []byte {
 
-	return string(s)
+	return s
 }

@@ -7,10 +7,16 @@
     color: #3eb581;
 }
 .markdown_show code{
-    background: #f9f9f9;
+    background: #fafbff;
     padding: 5px 15px;
 }
+
+.markdown_show pre{
+    background: #fafbff;
+    padding: 5px 15px;
+}
+
 .markdown_show{
     line-height: 30px;
-   font-family: 'PingFang SC', 'Myriad Pro', 'Hiragino Sans GB','youyuan', sans-serif;
+   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }

@@ -2,25 +2,25 @@ package main
 
 import (
 	"fmt"
+	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/labstack/gommon/log"
+	"github.com/shurcooL/vfsgen"
 	"github.com/tylerb/graceful"
 	"marki/app"
 	"marki/controller"
+	"net/http"
 	"os"
 	"strconv"
 	"time"
 )
-import "github.com/labstack/echo/v4"
-
 
 func init_config(e *echo.Echo) {
-
 	e.Logger.SetLevel(log.DEBUG)
 	e.Logger.SetOutput(os.Stdout)
 }
 
-func main()  {
+func main() {
 	e := echo.New()
 	// 注册中间件
 	RegisterMiddleware(e)
@@ -29,7 +29,7 @@ func main()  {
 	// Start server
 	init_config(e)
 
-	e.Logger.Info("server start on http://" + app.Config.Host + ":" + strconv.Itoa(app.Config.Port))
+	e.Logger.Info("server start on http://" + app.GConfig.Host + ":" + strconv.Itoa(app.GConfig.Port))
 
 	// 平滑关闭
 	err := graceful.ListenAndServe(e.Server, 5*time.Second)
@@ -39,13 +39,29 @@ func main()  {
 	e.Logger.Info("server stop success")
 }
 
+func GenerateStaticFile() {
+
+	var fs http.FileSystem = http.Dir("H:/marki/src/web/dist")
+	err := vfsgen.Generate(fs, vfsgen.Options{})
+	if err != nil {
+		log.Fatal(err)
+	}
+
+}
 
 func RegisterRouter(e *echo.Echo) {
+	// assert是全局变量，在生成的静态文件go文件里
+	staticFileHandler := http.FileServer(assets)
 
+	//http.Handle("/assets/", http.FileServer(assets))
 	//e.File("/", "web/dist/index.html")
-	e.File("/", "web/index.html")
-	e.Static("/css/*", "web/dist/css")
-	e.Static("/js/*", "web/dist/js")
+	//e.GET("/",echo.WrapHandler(staticFileHandler))
+	//e.File("/", "web/index.html")
+	//e.GET("/css/*", echo.WrapHandler(http.StripPrefix("/css/",staticFileHandler)))
+	//e.GET("/js/*", echo.WrapHandler(http.StripPrefix("/js/",staticFileHandler)))
+	//e.GET("/js/*", echo.WrapHandler(staticFileHandler))
+	e.GET("/*", echo.WrapHandler(staticFileHandler))
+	//e.Static("/js/*", "web/dist/js")
 
 	// Routes
 	//e.GET("/find/:key", controller.FileList)
@@ -55,8 +71,8 @@ func RegisterRouter(e *echo.Echo) {
 	//e.GET("/file/list", controller.FileList)
 	//
 	//e.GET("wsconncet", controller.WsConnect)
-	e.GET("/get_menu",controller.GetMenu)
-	e.GET("/get_content",controller.GetContent)
+	e.GET("/get_menu", controller.GetMenu)
+	e.GET("/get_content", controller.GetContent)
 }
 
 func RegisterMiddleware(e *echo.Echo) {

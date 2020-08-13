@@ -17,9 +17,12 @@ require (
 	github.com/labstack/gommon v0.3.0
 	github.com/microcosm-cc/bluemonday v1.0.2
 	github.com/remyoudompheng/bigfft v0.0.0-20200410134404-eec4a21b6bb0 // indirect
-	github.com/russross/blackfriday v2.0.0+incompatible
+	github.com/russross/blackfriday v1.5.2
+	github.com/shurcooL/httpfs v0.0.0-20190707220628-8d4bc4ba7749 // indirect
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
+	github.com/shurcooL/vfsgen v0.0.0-20181202132449-6a9ea43bcacd
 	github.com/tecbot/gorocksdb v0.0.0-20191217155057-f0fad39f321c // indirect
 	github.com/tylerb/graceful v1.2.15
 	golang.org/x/crypto v0.0.0-20191205180655-e7c4368fe9dd // indirect
+	golang.org/x/tools v0.0.0-20200619210111-0f592d2728bb // indirect
 )

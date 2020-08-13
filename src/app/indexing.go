@@ -6,11 +6,11 @@ import (
 )
 
 // 执行索引操作
-func indexing()  {
+func indexing() {
 	log.Info("indexing...")
 	//根据目录列表，索引每个文件的内容
-	//MenuData.Childs
-	//for k,v := range DocumentMap{
+	//GMenuData.Childs
+	//for k,v := range GDocumentMap{
 	//	DocIndex.Index(k,GenerateContent(k))
 	//	log.Info("index the doc :"+v.RealPath)
 	//}
@@ -23,9 +23,9 @@ func query(keyword string) *bleve.SearchResult {
 	query := bleve.NewMatchQuery(keyword)
 	search := bleve.NewSearchRequest(query)
 
-	searchResult,err := DocIndex.Search(search)
+	searchResult, err := DocIndex.Search(search)
 
-	if err!= nil {
+	if err != nil {
 		log.Error(err)
 	}
 	return searchResult
