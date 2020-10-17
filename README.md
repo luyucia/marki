@@ -29,6 +29,14 @@ marki -path ./ -host 0.0.0.0 -port 8088
 
 ## 如何开发前端
 ```shell script
+进到web目录
+执行
+npm run serve
+
+打包生产文件
+npm run build
+
+
 vue ui
 ```
 
