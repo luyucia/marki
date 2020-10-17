@@ -1,0 +1,22 @@
+.markdown_show h1,h2,h3,h4,h5,h6{
+    color: #42b983;
+}
+
+.markdown_show a:link,a:hover,a:visited{
+    text-decoration: none;
+    color: #3eb581;
+}
+.markdown_show code{
+    background: #fafbff;
+    padding: 5px 15px;
+}
+
+.markdown_show pre{
+    background: #fafbff;
+    padding: 5px 15px;
+}
+
+.markdown_show{
+    line-height: 30px;
+   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}

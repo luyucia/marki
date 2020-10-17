@@ -1,2 +1,37 @@
 # marki
 
+markdown内容服务器
+
+- 一个命令即可把你的文档目录变成在线访问的服务
+- 自动遍历目录，构建菜单
+- 文件修改，自动更新，无需重启服务
+
+## 如何编译
+```
+Linux:
+执行build.sh
+
+windows:
+执行build.cmd
+```
+
+## 如何使用
+```shell script
+marki ./
+第一个参数是文档的根目录
+目录里需要有.md后缀的文件
+
+详细:
+marki -path ./ -host 0.0.0.0 -port 8088
+
+```
+
+
+## 如何开发前端
+```shell script
+vue ui
+```
+
+## 如何打包静态资源到二进制中
+先执行 go generate
+assert_generate.go是生成脚本
