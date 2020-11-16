@@ -44,7 +44,14 @@ DDNS的服务商有很多，如果想长期使用，建议直接买个自己的�
 
 
 
+### 软件简介
+Vuetify 是 Vue 的语义化组件框架，旨在提供整洁、语义化和可重用的组件，使得构建应用程序更方便。
+
+通过借助 Vue 和 Material Design 的强大功能，以及大量精心制作的组件库和特性，我们可以使用 Vuetify 构建优秀的应用。Vuetify 遵守 Google 的 Material Design 规范，其组件具有易记忆的语义设计，可将记忆复杂的类和标记符号转换为简单且明确的名称。
+
+### 浏览器支持
+Vuetify 支持所有现代浏览器，包括 IE11 和 Safari 9+。从手机到笔记本电脑到 PC，均可在这些设备上完成交付。
 
 
 
-
+![avatar](https://upload-images.jianshu.io/upload_images/9780932-ddf758b61c5d4fc0.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)

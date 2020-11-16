@@ -31,10 +31,21 @@
 }
 
 .markdown_show pre {
-    background: #fafbff;
+    /*background: #fafbff;*/
+    background: #2d2d2d;
     padding: 5px 15px;
+    border-radius: 4px;
+    word-wrap: normal;
+    word-break: break-all;
+    white-space: pre;
+    /*overflow-x: scroll;*/
+    overscroll-behavior-x: contain;
+    line-height: 1.5;
 }
-
+.markdown_show pre code{
+    background: #2d2d2d;
+    color: #cccccc;
+}
 .markdown_show {
     line-height: 28px;
     font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
@@ -56,6 +67,6 @@
 
 .markdown_show th {
     font-weight: bold;
-    background-color:#f7f7f7;
+    background-color:#f5f5f5;
 }
 
