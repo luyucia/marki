@@ -14,12 +14,12 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-    .markdown_show {
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 10px;
-        width: 70%;
-    }
+    /*.markdown_show {*/
+    /*    margin-left: auto;*/
+    /*    margin-right: auto;*/
+    /*    padding-top: 10px;*/
+    /*    width: 70%;*/
+    /*}*/
 
     /*#app .el-row .markdown_show h1, h2, h3, h4, h5, h6 {*/
     /*    font-family: "TimesNewRomanPS-ItalicMT", "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans, serif;*/
