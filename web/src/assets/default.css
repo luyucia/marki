@@ -1,4 +1,4 @@
-.markdown_show{
+.markdown_show {
     font-size: 16px;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
@@ -11,47 +11,51 @@
     line-height: 1.6;
 }
 
-.markdown_show h1,h2,h3,h4,h5,h6{
+.markdown_show h1, h2, h3, h4, h5, h6 {
     color: #364938;
     -webkit-font-smoothing: antialiased;
 }
 
-.markdown_show a:link,a:hover,a:visited{
+.markdown_show a:link, a:hover, a:visited {
     text-decoration: none;
     color: #3eb581;
 }
-.markdown_show code{
+
+.markdown_show code {
     background: #fafbff;
-    padding: 5px 15px;
+    /*padding: 5px 15px;*/
     font-feature-settings: "tnum";
     font-variant: tabular-nums;
-    font-family: -apple-system,BlinkMacSystemFont,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
-.markdown_show pre{
+.markdown_show pre {
     background: #fafbff;
     padding: 5px 15px;
 }
 
-.markdown_show{
+.markdown_show {
     line-height: 28px;
-   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
 
-.markdown_show table{
+.markdown_show table {
     width: 80%;
 }
-.markdown_show table, th, td{
+
+.markdown_show table, th, td {
     border: 1px solid #cccccc;
-    border-collapse:collapse;
+    border-collapse: collapse;
     text-align: left;
 }
 
-.markdown_show td,th{
-    padding: 15px;
+.markdown_show td, th {
+    padding: 8px 12px;
 }
-.markdown_show th{
-    background-color:  #f1f1f1;
+
+.markdown_show th {
+    font-weight: bold;
+    background-color:#f7f7f7;
 }
 
